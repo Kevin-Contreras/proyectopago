@@ -3,7 +3,7 @@ const stripe = require('stripe')('sk_test_51KAk3VJ4LRGO4WGyBnTXbRgDyHsMMt0I92RMj
 var rutas =  express.Router()
 rutas.get("/",function(req,res,next){
   
-  res.render("/index.html")
+  res.render("index.html")
 })
 rutas.post('/create-checkout-session', async (req, res) => {
 

@@ -1,7 +1,7 @@
 //variables
 var express = require("express")
 
-var ruta = require("./router.js")
+var ruta = require("./back-end/router/router.js")
 var app = express()
 app.set("port",3000||process.env.PORT)
 //middleware
