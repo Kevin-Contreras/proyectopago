@@ -26,7 +26,7 @@ rutas.post('/create-checkout-session', async (req, res) => {
       },
     ],
     mode: 'payment',
-    success_url: 'https://proyectopago.herokuapp.com/heaceptada',
+    success_url: 'https://proyectopago.herokuapp.com/aceptada',
     cancel_url: 'https://proyectopago.herokuapp.com/',
   });
 
