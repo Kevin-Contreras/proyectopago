@@ -5,6 +5,9 @@ rutas.get("/",function(req,res,next){
   
   res.render("index.html")
 })
+rutas.get("/aceptada",function(req,res,next){
+  res.render("success.html")
+})
 rutas.post('/create-checkout-session', async (req, res) => {
 
   const session = await stripe.checkout.sessions.create({
@@ -24,7 +27,7 @@ rutas.post('/create-checkout-session', async (req, res) => {
     ],
     mode: 'payment',
     success_url: 'http://localhost:3000/success.html',
-    cancel_url: 'http://localhost:3000/',
+    cancel_url: 'http://localhost:3000/aceptada',
   });
 
   res.redirect(303, session.url);
