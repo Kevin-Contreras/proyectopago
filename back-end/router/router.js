@@ -5,9 +5,7 @@ rutas.get("/",function(req,res,next){
   
   res.render("index.html")
 })
-rutas.get("/aceptada",function(req,res,next){
-  res.render("success.html")
-})
+
 rutas.post('/create-checkout-session', async (req, res) => {
 
   const session = await stripe.checkout.sessions.create({
@@ -26,7 +24,7 @@ rutas.post('/create-checkout-session', async (req, res) => {
       },
     ],
     mode: 'payment',
-    success_url: 'https://proyectopago.herokuapp.com/aceptada',
+    success_url: 'https://proyectopago.herokuapp.com/success.html',
     cancel_url: 'https://proyectopago.herokuapp.com/',
   });
 
